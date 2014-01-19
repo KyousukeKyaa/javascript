@@ -1,0 +1,33 @@
+<style class="spoilerscript" type="text/css">
+    <!-- .spoilerscript {
+        display: none;
+        visibility: hidden;
+    }
+    .centerspoiler {
+        text-align: center;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    -->
+</style>
+
+<script class="spoilerscript" type="text/javascript">
+    function showSpoiler(obj) {
+        var inner = obj.parentNode.getElementsByTagName("div")[0];
+        if (inner.style.display == "none")
+            inner.style.display = "";
+        else
+            inner.style.display = "none";
+    }
+</script>
+
+<div class="centerspoiler">
+    <div class="spoiler">
+        <input class="button" type="button" onclick="showSpoiler(this);" value="Click Me!" />
+        <div class="inner" style="display:none;">
+
+            Spoiler Content Here!
+
+        </div>
+    </div>
+</div>
