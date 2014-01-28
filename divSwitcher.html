@@ -1,0 +1,24 @@
+<div class="centerswitcher">
+    <div class="switcherdiv">
+        <input class="switcher" type="button" onclick="divSwitcher(this);" value="Div 1" />
+        <div class="div1" style="display:none;">Div 1</div>
+        <div class="div2" style="display:block;">Div 2</div>
+    </div>
+</div>
+
+<script class="switcherscript" type="text/javascript">
+    function divSwitcher(obj) {
+        var div1 = obj.parentNode.getElementsByTagName("div")[0];
+        var div2 = obj.parentNode.getElementsByTagName("div")[1];
+        var switcher = obj.parentNode.getElementsByTagName("input")[0];
+        if (div1.style.display == "none") {
+            div1.style.display = "block";
+            div2.style.display = "none";
+            switcher.value = "Div 2";
+        } else {
+            div1.style.display = "none";
+            div2.style.display = "block";
+            switcher.value = "Div 1";
+        }
+    }
+</script>
